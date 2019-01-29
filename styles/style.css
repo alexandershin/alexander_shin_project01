@@ -1,0 +1,317 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* GENERAL STYLES */
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: 'Catamaran', sans-serif;
+  /* font-family: 'Pacifico', cursive; */
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+h1, 
+h2 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:visited {
+  display: none;
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.1rem;
+}
+
+.wrapper {
+  max-width: 1084px;
+  margin : 0 auto;
+}
+
+/* HEADER STYLES */
+header {
+  background: url(../assets/image01First.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.topNav ul {
+  text-align: center;
+}
+
+.topNav ul li {
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.topNav ul a {
+  color: #fff;
+}
+
+.heroContainer {
+  position: relative;
+}
+
+.heroTitle {
+  text-align: center;
+  padding: 180px;
+}
+
+.heroTitle h1 {
+  color: #f2a11c;
+  font-family: 'Pacifico', cursive;
+  font-size: 6rem;
+
+  /* padding: 8rem; */
+  /* text-align: center; */
+  /* margin: 0 auto; */
+  /* margin-top: calc(50vh - 6rem); */
+}
+
+.heroSocial {
+  color: #f2a11c;
+  position: absolute;
+  right: 40px;
+  /* top: 220px; */
+  top: 40%;
+}
+
+.heroSocial a {
+  color: #f2a11c;
+}
+
+/* ABOUT US STYLES */
+/* MISSION STATEMENT STYLES */
+.about,
+.mission {  
+  width: 50%;
+  float: left;
+}
+
+.about a,
+.mission a {
+  color: #f2a11c;
+  background: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 30px;
+}
+
+.aboutText {
+  padding: 80px 70px 70px 0;
+}
+
+.about p,
+.mission p {
+  padding-bottom: 30px;
+  line-height: 1.45;
+}
+
+.missionText {
+  padding: 80px 0 70px 70px;
+}
+
+/* MEET ALISSA STYLES */
+.meetBackground {
+  background: #f4f4f4;
+  padding: 100px;
+}
+
+.meet {
+  float: left;
+}
+
+.meetImage {
+  width: calc(100% / 3);
+  text-align: center;
+  margin-right: 40px; 
+}
+
+.meetText {
+  width: calc(66.66% - 40px);
+  /* min-height: 360px; */
+
+}
+
+.meetText h2 {
+  line-height: 1;
+}
+
+.meetText p {
+  padding: 40px 0 40px 0;
+  line-height: 1.45;
+  /* min-height: 360px; */
+}
+
+.meetText a {
+  color: #f2a11c;
+  background: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 30px;
+}
+
+/* MID BANNER STYLES */
+.midBanner {
+  background: url(../assets/image05First.jpg) no-repeat;
+  background-position: center;
+  height: 60vh;
+  /* why 60vh??? */
+}
+
+.midBannerWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.midBannerContainer {
+  text-align: center;
+  padding: 25vh 0;
+  /* why 25vh center??? */
+}
+
+.icons {
+  float: left;
+  width: calc(100% / 3);
+}
+.icons i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.icons p {
+  color: #f2a11c;
+  font-size: 1.5rem;
+}
+
+/* GRAM STYLES */
+.gramSection {
+  padding: 100px 0;
+}
+
+.gramTitle {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.gramContainer {
+  /* width: calc(100% / 3); */
+}
+
+.gram {
+  float: left;
+  width: calc((100% - 80px) / 3);
+  margin: 20px;
+}
+
+.gramContainer .gram:first-child{
+  margin-left: 0;
+}
+
+.gramContainer .gram:last-child{
+  margin-right: 0;
+}
+
+/* FOOTER STYLES */
+footer {
+  background: #222222;
+}
+
+.bottomContainer {
+  padding: 60px 0;
+}
+
+.bottomContainer p {
+  color: #fff;
+}
+
+.bottomContainer a {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.bottomNav {
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.bottomNav ul li {
+  display: inline-block;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+
+.bottom {
+  float: left;
+  width: 50%;
+}
+
+.bottom h3 {
+  color: #f2a11c;
+  font-family: 'Pacifico', cursive;
+}
+
+form {
+  font-size: 0.8rem;
+  display: block;
+}
+
+input[type="subscribe"] {
+  background: #f2a11c;
+  color: #000;
+  border: 2px solid #f2a11c;
+}
+
+.bottomBox1 p {
+  width: 60%;
+}
+
+
+.copyright {
+  background: #000000;
+  color: #fcfcfc;
+  text-align: center;
+}
