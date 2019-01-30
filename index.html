@@ -14,6 +14,8 @@
 <body>
   <!-- HEADER STARTS -->
   <header class="clearfix">
+    <i class="fas fa-bars menu"></i>
+    <!-- TOP NAVIGATION STARTS -->
     <nav class="topNav">
       <ul class="clearfix">
         <li><a href="#home">Home</a></li>
@@ -22,13 +24,17 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <!-- TOP NAVIGATION ENDS -->
 
-    <div class="heroContainer clearfix">
-      <div class="heroTitle">
+    <div class="heeaderContainer clearfix">
+      <!-- HEADER TITLE STARTS -->
+      <div class="headerTitle">
         <h1 class="title">Bikerland</h1>
       </div>
+      <!-- HEADER TITLE ENDS -->
 
-      <div class="heroSocial">
+      <!-- SOCIAL NAVIGATION STARTS -->
+      <div class="headerSocialNav">
         <ul>
           <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
           <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
@@ -36,6 +42,7 @@
           <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
+      <!-- SOCIAL NAVIGATION ENDS -->
     </div>
   </header>
   <!-- HEADER ENDS -->
@@ -44,6 +51,11 @@
     <!-- ABOUT US STARTS -->
     <section>
       <div class="aboutContainer clearfix">
+
+        <div class="aboutMobile">
+          <img src="assets/image02Mobile.jpg" alt="close up of a cycling shoe on a bicycle pedal">
+        </div>
+
         <div class="wrapper">
           <div class="about aboutText">
             <h2 class="title">About us</h2>
@@ -52,7 +64,7 @@
           </div>
         </div>
 
-        <div class="about">
+        <div class="about aboutFull">
           <img src="assets/image02First.jpg" alt="close up of a cycling shoe on a bicycle pedal">
         </div>
       </div>
@@ -62,8 +74,12 @@
     <!-- MISSION STATEMENT STARTS -->
     <section>
         <div class="missionContainer clearfix">
-          <div class="mission">
+          <div class="mission missionFull">
             <img src="assets/image03First.jpg" alt="front view of a black bicycle in front of a black gate">
+          </div>
+
+          <div class="missionMobile">
+            <img src="assets/image03Mobile.jpg" alt="front view of a black bicycle in front of a black gate">
           </div>
 
           <div class="wrapper">
@@ -80,18 +96,23 @@
     
     <!-- MEET ALISSA STARTS -->
     <section class="meetBackground">
-      <div class="wrapper">
-        <div class="meetContainer clearfix">
+      <div class="wrapper clearfix">
+        <!-- <div class="clearfix"> -->
           <div class="meet meetImage">
             <img src="assets/image04First.jpg" alt="side profile of a person riding a bicycle with a blurred background">
+          </div>
+
+          <div class="meet meetImageMobile">
+            <img src="assets/image04Mobile.jpg" alt="side profile of a person riding a bicycle with a blurred background">
           </div>
         
           <div class="meet meetText">
             <h2 class="title">Meet Alissa</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor neque qui non deserunt eligendi repudiandae ab hic eveniet maiores! Perferendis similique, sed deleniti consequatur ab incidunt vitae repudiandae explicabo labore libero eum magni eius quas, iste quibusdam illum alias natus error dolor, reiciendis soluta velit laborum itaque vel? Fugit voluptate corrupti perferendis incidunt illo ad inventore aliquid hic error voluptatum!</p>
-            <a href="#readMore">read more</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum
+            consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.</p>
+            <a href="#readMore" class="readMore">read more</a>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     </section>
     <!-- MEET ALISSA ENDS -->
@@ -130,15 +151,15 @@
       <div class="wrapper">
         <h2 class="title gramTitle">The Gram</h2>
         <div class="gramContainer clearfix">
-          <div class="gram">
+          <div class="gram gramMobile1">
             <img src="assets/image06First.jpg" alt="image of a woman riding her bike up a street">
           </div>
 
-          <div class="gram">
+          <div class="gram gramMobile2">
             <img src="assets/image07First.jpg" alt="back view of someone riding their bicycle in cycling gear">
           </div>
 
-          <div class="gram">
+          <div class="gram gramMobileRemove">
             <img src="assets/image08First.jpg" alt="image of a white cruiser bicycle leaning against a metal wall">
           </div>
         </div>
@@ -155,10 +176,10 @@
         <div class="bottomNav">
           <nav>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -167,20 +188,19 @@
         <!-- BOTTOM CONTACT STARTS -->
         <div class="bottomContact clearfix">
           <div class="bottom bottomBox1">
-            <h3>Contact</h3>
-            <p>info@email.com | 123 - 456 - 7890
-            123 some road, Toronto, ON
-            A5A 5A5, Canada</p>
+            <h2 class="title">Contact</h2>
+            <p>info@email.com | 123 - 456 - 7890</p>
+            <p>123 some road, Toronto, ON</p>
+            <p>A5A 5A5, Canada</p>
           </div>
           
           <div class="bottom bottomBox2">
-            <h3>Stay updated</h3>
+            <h2 class="title">Stay updated</h2>
             <p>Subscribe to our newsletter to stay updated.</p>
-            <form action="#" method="POST" name="email" class="email" autocomplete="off">
+            <form action="#" method="POST" name="email" class="email clearfix" autocomplete="off">
               <label for="email" class="visuallyhidden"></label>
-              <input type="email" name="email" placeholder="Email Address" id="email">
-              <label for="subscribe"></label>
-              <input type="subscribe" id="subscribe" name="subscribe" value="Subscribe">
+              <input type="email" name="email" placeholder="email address" id="email">
+              <input type="submit" id="subscribe" name="subscribe" value="Subscribe">
             </form>
           </div>
         </div>

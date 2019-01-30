@@ -17,6 +17,15 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
   overflow: hidden;
 }
 
+/* DESIGN COLORS
+#f2a11c
+#222222
+#fff
+#000
+#232323
+#f4f4f4
+#fcfcfc */
+
 /* GENERAL STYLES */
 html {
   font-size: 125%;
@@ -45,7 +54,10 @@ ul {
 }
 
 p {
+  color: #1f2022;
   margin: 0;
+  font-weight: 400;
+  line-height: 1.45;
   letter-spacing: 0;
 }
 
@@ -58,9 +70,25 @@ a:visited {
   display: none;
 }
 
+.menu {
+	position: absolute;
+	right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 30px;
+  z-index: 1;
+  font-size: 2rem;
+  color: #fff;
+	display: none;
+}
+
 .title {
+  color: #222;
   font-family: 'Pacifico', cursive;
   font-size: 2.1rem;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .wrapper {
@@ -89,38 +117,44 @@ header {
 
 .topNav ul a {
   color: #fff;
+  border-bottom: 2px solid transparent;
+  font-weight: 600;
 }
 
-.heroContainer {
+.topNav ul a:hover {
+  color: #f2a11c;
+}
+
+.headerContainer {
   position: relative;
 }
 
-.heroTitle {
+.headerTitle {
   text-align: center;
-  padding: 180px;
+  padding: 180px 0;
+  margin: 0 auto;
 }
 
-.heroTitle h1 {
+.headerTitle h1 {
   color: #f2a11c;
   font-family: 'Pacifico', cursive;
-  font-size: 6rem;
-
-  /* padding: 8rem; */
-  /* text-align: center; */
-  /* margin: 0 auto; */
-  /* margin-top: calc(50vh - 6rem); */
+  font-size: 6.5rem;
 }
 
-.heroSocial {
+.headerSocialNav {
   color: #f2a11c;
   position: absolute;
   right: 40px;
-  /* top: 220px; */
-  top: 40%;
+  top: 37%;
 }
 
-.heroSocial a {
+.headerSocialNav a {
   color: #f2a11c;
+  border: 2px solid transparent;
+}
+
+.headerSocialNav a:hover {
+  color: #fff;
 }
 
 /* ABOUT US STYLES */
@@ -131,13 +165,24 @@ header {
   float: left;
 }
 
-.about a,
-.mission a {
+.aboutMobile,
+.missionMobile {
+  display: none;
+}
+
+.readMore {
   color: #f2a11c;
-  background: #000;
+  background: #222;
+  font-size: 0.9rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 15px 30px;
+  padding: 10px 30px;
+  display: inline-block;
+}
+
+.about a:hover,
+.mission a:hover {
+  color: #fff;
 }
 
 .aboutText {
@@ -147,7 +192,6 @@ header {
 .about p,
 .mission p {
   padding-bottom: 30px;
-  line-height: 1.45;
 }
 
 .missionText {
@@ -157,7 +201,7 @@ header {
 /* MEET ALISSA STYLES */
 .meetBackground {
   background: #f4f4f4;
-  padding: 100px;
+  padding: 100px 0;
 }
 
 .meet {
@@ -166,14 +210,16 @@ header {
 
 .meetImage {
   width: calc(100% / 3);
-  text-align: center;
+  /* text-align: center; */
   margin-right: 40px; 
+}
+
+.meetImageMobile {
+  display: none;
 }
 
 .meetText {
   width: calc(66.66% - 40px);
-  /* min-height: 360px; */
-
 }
 
 .meetText h2 {
@@ -181,17 +227,11 @@ header {
 }
 
 .meetText p {
-  padding: 40px 0 40px 0;
-  line-height: 1.45;
-  /* min-height: 360px; */
+  padding: 48px 0 48px 0;
 }
 
-.meetText a {
-  color: #f2a11c;
-  background: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 15px 30px;
+.meetText a:hover {
+  color: #fff;
 }
 
 /* MID BANNER STYLES */
@@ -199,7 +239,6 @@ header {
   background: url(../assets/image05First.jpg) no-repeat;
   background-position: center;
   height: 60vh;
-  /* why 60vh??? */
 }
 
 .midBannerWrapper {
@@ -210,13 +249,13 @@ header {
 .midBannerContainer {
   text-align: center;
   padding: 25vh 0;
-  /* why 25vh center??? */
 }
 
 .icons {
   float: left;
   width: calc(100% / 3);
 }
+
 .icons i {
   color: #fff;
   font-size: 2rem;
@@ -229,16 +268,12 @@ header {
 
 /* GRAM STYLES */
 .gramSection {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .gramTitle {
   text-align: center;
-  padding-bottom: 100px;
-}
-
-.gramContainer {
-  /* width: calc(100% / 3); */
+  padding-bottom: 80px;
 }
 
 .gram {
@@ -251,7 +286,7 @@ header {
   margin-left: 0;
 }
 
-.gramContainer .gram:last-child{
+.gramContainer .gram:nth-of-type(3){
   margin-right: 0;
 }
 
@@ -270,7 +305,7 @@ footer {
 
 .bottomContainer a {
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .bottomNav {
@@ -278,10 +313,15 @@ footer {
   text-align: center;
 }
 
+.bottomNav ul a:hover {
+  color: #f2a11c;
+}
+
 .bottomNav ul li {
   display: inline-block;
   font-weight: 600;
   padding: 15px 20px;
+  text-transform: uppercase;
 }
 
 .bottom {
@@ -289,29 +329,241 @@ footer {
   width: 50%;
 }
 
-.bottom h3 {
+.bottom h2 {
   color: #f2a11c;
   font-family: 'Pacifico', cursive;
+  font-size: 1.25rem;
+  padding: 20px 0 10px 0;
+}
+
+.bottomBox2 p {
+  padding-bottom: 10px;
 }
 
 form {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   display: block;
 }
 
-input[type="subscribe"] {
+input[type="email"] {
+  color: #232323;
+  float: left;
+  width: 70%;
+  padding: 7px 0 7px 30px;
+}
+
+input[type="submit"] {
+  color: #1f2022;
   background: #f2a11c;
-  color: #000;
   border: 2px solid #f2a11c;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  width: 30%;
+  float: right;
+  padding: 8px 0;
+}
+
+input[type="submit"]:hover {
+  color: #f2a11c;
+  background: #1f2022;
+  border: 2px solid #1f2022;
 }
 
 .bottomBox1 p {
-  width: 60%;
+  width: 55%;
 }
 
-
-.copyright {
-  background: #000000;
+.copyright p {
   color: #fcfcfc;
+  background: #000000;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-align: center;
+  opacity: 0.5;
+  padding: 8px;
 }
+
+/* MEDIA QUERIES STYLES */
+@media(max-width: 1220px) {
+  .wrapper {
+    width: 80%;
+  }
+
+  .aboutText,
+  .missionText {
+    padding: 16px 20px;
+  }
+
+  .meetImage,
+  .meetText {
+    width: calc(50% - 20px);
+  }
+}
+
+/* 758 835*/  
+@media(max-width: 985px) {
+  header {
+    min-height: 600px;
+    height: 50vw;
+  }
+
+  header {
+    background: url(../assets/image01Mobile.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 150vw;
+}
+
+  .topNav,
+  .headerSocialNav {
+    display:none;
+  }
+
+  .headerTitle h1  {
+    font-size: 3.75rem;
+  }
+  .wrapper {
+    width: 90%;
+  }
+
+  .about,
+  .mission,
+  .aboutMobile,
+  .missionMobile,
+  .meetImageMobile {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+
+  .aboutFull,
+  .missionFull,
+  .meetImage {
+    display: none;
+  }
+
+  .readMore {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .aboutText,
+  .missionText {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .meetBackground {
+    padding: 60px 0;
+  }
+
+  .meet {
+    float: none;
+  }
+
+  .meetText {
+    width: 100%; 
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .meetText p {
+    text-align: left;
+  }
+
+  .midBanner {
+    background-position: top 50% right 30%;
+    background-size: cover;
+    height: 74vh;
+}
+
+  .midBannerContainer {
+    padding: 50px 0;
+}
+
+  .icons {
+    float: none;
+    width: 100%;
+    padding: 35px 0;
+  }
+  .gramSection {
+    padding: 40px 0;
+  }
+
+  .gramTitle {
+    padding-bottom: 40px;
+  }
+
+  .gram {
+    width: calc(50% - 10px);
+    /* margin: 0 5px; */
+  }
+
+  .gramMobile1 {
+    margin-right: 15px;
+  } 
+
+  .gramMobile2 {
+    /* margin: 0 0 0 5px; */
+    margin-right: 0px;
+    margin-left: 5px;
+  }
+
+  .gramMobileRemove {
+    display: none;
+    margin: 0;
+  }
+
+  .bottomContainer a {
+    font-size: 1rem;
+  }
+
+  .bottomNav {
+    float: none;
+  }
+  .bottomNav ul li {
+    font-weight: 600;
+    padding: 5px 14px;
+    text-transform: none;
+  }
+
+  .bottom {
+    float: none;
+    width: 100%; 
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    float: none;
+    width: 100%;
+  }
+
+  input[type="email"] {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .bottomBox2 {
+    font-size: .9rem;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media(max-width: 399px) {
+  .headerTitle h1  {
+    font-size: 3.5rem;
+  }
+  
+  .gram {
+    width: 100%;
+  }
+
+}
+
+
+
