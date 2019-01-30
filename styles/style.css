@@ -33,7 +33,6 @@ html {
 
 body {
   font-family: 'Catamaran', sans-serif;
-  /* font-family: 'Pacifico', cursive; */
 }
 
 img {
@@ -210,7 +209,6 @@ header {
 
 .meetImage {
   width: calc(100% / 3);
-  /* text-align: center; */
   margin-right: 40px; 
 }
 
@@ -309,7 +307,6 @@ footer {
 }
 
 .bottomNav {
-  /* margin: 0 auto; */
   text-align: center;
 }
 
@@ -401,7 +398,6 @@ input[type="submit"]:hover {
   }
 }
 
-/* 758 835*/  
 @media(max-width: 985px) {
   header {
     min-height: 600px;
@@ -497,7 +493,6 @@ input[type="submit"]:hover {
 
   .gram {
     width: calc(50% - 10px);
-    /* margin: 0 5px; */
   }
 
   .gramMobile1 {
@@ -505,7 +500,6 @@ input[type="submit"]:hover {
   } 
 
   .gramMobile2 {
-    /* margin: 0 0 0 5px; */
     margin-right: 0px;
     margin-left: 5px;
   }
