@@ -525,12 +525,18 @@ input[type="submit"]:hover {
   .bottom {
     float: none;
     width: 100%; 
+    text-align: center;
+  }
+
+  .bottomBox1 p {
+    width: 100%;
   }
 
   input[type="email"],
   input[type="submit"] {
     float: none;
     width: 100%;
+    max-width: 60%;
   }
 
   input[type="email"] {
@@ -545,6 +551,14 @@ input[type="submit"]:hover {
 
   .menu {
     display: block;
+  }
+}
+
+@media(max-width: 985px) {
+  input[type="email"],
+  input[type="submit"] {
+    float: none;
+    max-width: 100%;
   }
 }
 
