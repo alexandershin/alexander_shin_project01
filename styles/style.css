@@ -29,10 +29,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 /* GENERAL STYLES */
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Catamaran', sans-serif;
+  position: relative;
 }
 
 img {
@@ -63,22 +65,38 @@ p {
 a {
   text-decoration: none;
   display: inline-block;
+  transition: all .3s ease;
 }
 
 a:visited {
   display: none;
 }
 
-.menu {
+.hamburger {
 	position: absolute;
-	right: 20px;
+	left: 20px;
   top: 20px;
-  width: 40px;
-  height: 30px;
   z-index: 1;
   font-size: 2rem;
+}
+
+.hamburger-box .hamburger-inner:focus,
+.hamburger-box .hamburger-inner::before:focus,
+.hamburger-box .hamburger-inner::after:focus {
   color: #fff;
-	display: none;
+} 
+
+.hamburger-box .hamburger-inner,
+.hamburger-box .hamburger-inner::before,
+.hamburger-box .hamburger-inner::after {
+  display: none;
+} 
+
+.topNav ul.active {
+  top: 0;
+	right: 0;
+	bottom: 0; 
+  z-index: 1;
 }
 
 .title {
@@ -105,24 +123,29 @@ header {
 
 .topNav ul {
   text-align: center;
+  padding-top: 10px;
 }
 
 .topNav ul li {
   display: inline-block;
   padding: 15px 20px;
   margin: 0 auto;
-  font-weight: 600;
 }
 
 .topNav ul a {
   color: #fff;
-  border-bottom: 2px solid transparent;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: .8rem;
+  transition: all .3s ease;
 }
 
-.topNav ul a:hover {
+.topNav ul a:hover,
+.topNav ul a:focus  {
   color: #f2a11c;
 }
+
 
 .headerContainer {
   position: relative;
@@ -152,7 +175,8 @@ header {
   border: 2px solid transparent;
 }
 
-.headerSocialNav a:hover {
+.headerSocialNav a:hover,
+.headerSocialNav a:focus {
   color: #fff;
 }
 
@@ -180,7 +204,9 @@ header {
 }
 
 .about a:hover,
-.mission a:hover {
+.mission a:hover,
+.about a:focus,
+.mission a:focus {
   color: #fff;
 }
 
@@ -228,14 +254,15 @@ header {
   padding: 48px 0 48px 0;
 }
 
-.meetText a:hover {
+.meetText a:hover,
+.meetText a:focus {
   color: #fff;
 }
 
 /* MID BANNER STYLES */
 .midBanner {
-  background: url(../assets/image05First.jpg) no-repeat;
-  background-position: center;
+  background: url(../assets/image05First.jpg) no-repeat center;
+  background-size: cover;
   height: 60vh;
 }
 
@@ -257,6 +284,12 @@ header {
 .icons i {
   color: #fff;
   font-size: 2rem;
+  transition: all .3s ease;
+}
+
+.icons:hover i,
+.icons:focus i {
+  color: #f2a11c;
 }
 
 .icons p {
@@ -310,7 +343,8 @@ footer {
   text-align: center;
 }
 
-.bottomNav ul a:hover {
+.bottomNav ul a:hover,
+.bottomNav ul a:focus  {
   color: #f2a11c;
 }
 
@@ -359,9 +393,11 @@ input[type="submit"] {
   width: 30%;
   float: right;
   padding: 8px 0;
+  transition: all .3s ease;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   color: #f2a11c;
   background: #1f2022;
   border: 2px solid #1f2022;
@@ -387,14 +423,90 @@ input[type="submit"]:hover {
     width: 80%;
   }
 
-  .aboutText,
+  .aboutText {
+    padding-top: 70px;
+    padding-right: 70px;
+  }
   .missionText {
-    padding: 16px 20px;
+    padding-top: 70px;
+    padding-left: 70px;
+  }
+
+  .aboutText h2,
+  .missionText h2 {
+    font-size: 1.8rem;
+  }
+
+  .aboutText p ,
+  .missionText p{
+    font-size: .9rem;
   }
 
   .meetImage,
   .meetText {
     width: calc(50% - 20px);
+  }
+}
+
+@media(max-width: 1150px)  {
+  .aboutText, 
+  .missionText {
+    padding-top: 60px;
+  }
+
+  .aboutText {
+    padding-right: 60px;
+  }
+
+  .missionText {
+    padding-left: 60px;
+  }
+}
+
+@media(max-width: 1110px) {
+  .aboutText, 
+  .missionText {
+    padding-top: 50px;
+  }
+
+  .aboutText {
+    padding-right: 50px;
+  }
+  .missionText {
+    padding-left: 50px;
+  }
+}
+
+@media(max-width: 1080px) {
+  .aboutText {
+    padding-right: 40px;
+  }
+  .missionText {
+    padding-left: 40px;
+  }
+
+  .aboutText h2,
+  .missionText h2 {
+    font-size: 1.7rem;
+  }
+
+  .aboutText p ,
+  .missionText p{
+    font-size: 0.8rem;
+  }
+}
+
+@media(max-width: 1050px) {
+  .aboutText, 
+  .missionText {
+    padding-top: 35px;
+  }
+
+  .aboutText {
+    padding-right: 35px;
+  }
+  .missionText {
+    padding-left: 35px;
   }
 }
 
@@ -411,16 +523,46 @@ input[type="submit"]:hover {
     min-height: 150vw;
 }
 
-  .topNav,
   .headerSocialNav {
     display:none;
   }
 
-  .headerTitle h1  {
-    font-size: 3.75rem;
+  .hamburger-box .hamburger-inner,
+  .hamburger-box .hamburger-inner::before,
+  .hamburger-box .hamburger-inner::after {
+  display: block;
+}
+
+  .topNav ul {
+		display: block;
+    right: -25%;
+    top: 0;
+		bottom: 0;
+    width: 25%;
+    padding: 20px 30px 0 30px;
+    text-align: left;
+		background: rgba(0,0,0,0.8);	
+		position: fixed;
+    transition: all .3s;
+    z-index: 1;
   }
+  
+  .topNav ul a {
+    font-size: .8rem;
+  }
+
   .wrapper {
     width: 90%;
+  }
+
+  .aboutText h2,
+  .missionText h2 {
+    font-size: 2.1rem;
+  }
+
+  .aboutText p ,
+  .missionText p{
+    font-size: 1rem;
   }
 
   .about,
@@ -431,6 +573,7 @@ input[type="submit"]:hover {
     width: 100%;
     float: none;
     display: block;
+    padding-top: 14px;
   }
 
   .aboutFull,
@@ -471,11 +614,12 @@ input[type="submit"]:hover {
   .midBanner {
     background-position: top 50% right 30%;
     background-size: cover;
-    height: 74vh;
+    height: 70vh;
+
 }
 
   .midBannerContainer {
-    padding: 50px 0;
+    padding: 5vh 0;
 }
 
   .icons {
@@ -535,30 +679,108 @@ input[type="submit"]:hover {
   input[type="email"],
   input[type="submit"] {
     float: none;
-    width: 100%;
-    max-width: 60%;
+    width: 50%;
+    max-width: 50%;
   }
 
   input[type="email"] {
     margin-bottom: 10px;
     text-align: center;
-    padding: 0;
+    padding: 5px 0;
   }
 
   .bottomBox2 {
     font-size: .9rem;
   }
 
-  .menu {
-    display: block;
-  }
 }
 
-@media(max-width: 985px) {
+@media(max-width: 850px) {
   input[type="email"],
   input[type="submit"] {
     float: none;
-    max-width: 100%;
+    width: 60%;
+    max-width: 60%;
+  }
+
+  .topNav ul {
+    right: -30%;
+    top: 0;
+		bottom: 0;
+    width: 30%;
+    padding: 20px 20px 0 20px;
+	}
+}
+
+@media(max-width: 750px) {
+
+  .headerTitle h1  {
+    font-size: 6rem;
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    float: none;
+    width: 70%;
+    max-width: 70%;
+  }
+}
+
+@media(max-width: 650px) {
+  .headerTitle h1  {
+    font-size: 5.5rem;
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    float: none;
+    width: 80%;
+    max-width: 80%;
+  }
+
+  .topNav ul {
+    right: -35%;
+    top: 0;
+		bottom: 0;
+    width: 35%;
+    padding: 20px 10px 0 10px;
+  }
+  
+  .topNav ul a {
+    font-size: .7rem;
+  }
+}
+
+@media(max-width: 550px) {
+  .headerTitle h1  {
+    font-size: 4.5rem;
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    float: none;
+    width: 85%;
+    max-width: 85%;
+  }
+}
+
+@media(max-width: 450px) {
+  .headerTitle h1  {
+    font-size: 4rem;
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    float: none;
+    width: 90%;
+    max-width: 90%;
+  }
+  .topNav ul {
+    right: -40%;
+    top: 0;
+		bottom: 0;
+    width: 40%;
+    padding: 20px 5px 0 5px;
   }
 }
 
@@ -569,6 +791,19 @@ input[type="submit"]:hover {
   
   .gram {
     width: 100%;
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    float: none;
+    width: 100%;
+    max-width: 800%;
+  }
+}
+
+@media(max-width: 350px) {
+  .headerTitle h1  {
+    font-size: 3rem;
   }
 
 }
